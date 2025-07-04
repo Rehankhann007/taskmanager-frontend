@@ -16,7 +16,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://taskmanager-backend-ztz8.onrender.com/api/auth/auth/login', form);
+      const res = await axios.post('https://taskmanager-backend-ztz8.onrender.com/api/auth/login', form);
       localStorage.setItem('token', res.data.token);
       navigate('/board');
     } catch (err) {
